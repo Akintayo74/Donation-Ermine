@@ -11,13 +11,17 @@ const InputSection = styled.input `
     color: hsla(0, 0%, 56%, 1);
 `;
 
-function Input({ placeholder, }) {
+function Input({ placeholder, name, type, value, onChange, ...rest }) {
     
     return ( 
         <>
             <InputSection 
                 placeholder={placeholder}
-
+                name={name}
+                type={type}
+                value={value}
+                onChange={onChange}
+                {...rest}
             />
         </>
     )

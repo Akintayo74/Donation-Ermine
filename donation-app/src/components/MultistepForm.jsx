@@ -14,9 +14,21 @@ function MultistepForm() {
         orgAddress: '',
     })
 
+    const updateFormData = (field, value) => {
+        setFormData(prev => ({
+            ...prev,
+            [field]: value
+        }))
+    }
+
     return (
         <>
-
+            {step === 1 && <FormStep1 formData={formData} onChange={handleChange} onNext={() => setStep(2)} />}
+            {step === 2 && <FormStep2 formData={formData} onChange={handleChange} onNext={() => setStep(3)} />}
+            {step === 3 && <FormStep3 formData={formData} onChange={handleChange} onNext={() => setStep(4)} />}
+            {step === 4 && <FormStepReview formData={formData} onSubmit={handleSubmit} />}
         </>
     )
 }
+
+export default MultistepForm;
