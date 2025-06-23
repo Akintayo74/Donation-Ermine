@@ -56,7 +56,9 @@ const GlobalStyles = createGlobalStyle `
     //Global styles
     :root {
         font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-        font-weight: 400;
+        --font-weight-default: 400;
+        --font-weight-bold: 700;
+        --font-size-medium: 20px;
 
         color-scheme: light dark;
         color: rgba(255, 255, 255, 0.87);
@@ -66,6 +68,7 @@ const GlobalStyles = createGlobalStyle `
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+
     }
 
 
