@@ -59,6 +59,7 @@ const GlobalStyles = createGlobalStyle `
         --font-weight-default: 400;
         --font-weight-bold: 700;
         --font-size-medium: 20px;
+        --font-size-normal: 17px;
 
         color-scheme: light dark;
         color: rgba(255, 255, 255, 0.87);
