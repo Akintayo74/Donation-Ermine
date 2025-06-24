@@ -13,13 +13,22 @@ function FormStep2({ formData, onNext, onChange }) {
                     <h2>Almost There!</h2>
                     <p>Lorem ipsum is simply dummy text of the printing and writing industry</p>
 
-                    <Label>CAC or Local Government registration ID</Label>
+                    <Label htmlFor="id">CAC or Local Government registration ID</Label>
                     <Input 
-                        name = "orgName"
-                        placeholder = 'Organization name here'
-                        value = {formData.orgName}
+                        name = "id"
+                        placeholder = 'Organization ID here'
+                        value = {formData.id}
                         type = 'text'
-                        onChange = {(event) => onChange('orgName', event.target.value)}
+                        onChange = {(event) => onChange('id', event.target.value)}
+                    />
+
+                    <Label>Organization Mobile Number</Label>
+                    <Input 
+                        name = "orgNumber"
+                        placeholder = "Organization Mobile Number here"
+                        value = {formData.orgNumber}
+                        type = 'tel'
+                        onChange={(e) => onChange('orgNumber', e.target.value)}
                     />
 
                     <Button>Next Step</Button>

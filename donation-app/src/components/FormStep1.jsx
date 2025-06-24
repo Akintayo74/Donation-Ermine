@@ -1,20 +1,19 @@
 import Input from "./Input";
 import Button from "./Button";
-import styled from "styled-components";
 import PageWrapper from "./PageWrapper";
 import Form from "./Form";
+import { Link } from 'react-router-dom';
 
 function FormStep1({ formData, onNext, onChange }) {
 
-    // function handleSubmit(event) {
-    //     event.preventDefault();
-    //     onNext();
-    // }
 
     return (
         <>
             <PageWrapper>
                 <Form onSubmit={() => onNext()}>
+                    <h1>New here?</h1>
+                    <p>Lorem ipsum is simply dummy text of the printing and writing industry</p>
+                    <p>Already have an account? <Link to='/auth/login'>Login</Link></p>
                     <label htmlFor="orgName">Organization Name</label>
                     <Input 
                         name = "orgName"
@@ -49,18 +48,6 @@ function FormStep1({ formData, onNext, onChange }) {
         </>
     )
 }
-
-// const Form = styled.form `
-//     display: flex;
-//     flex-direction: column;
-//     gap: 10px;
-//     margin: 10px;
-
-//     & > Input {
-//         margin-bottom: 10px;
-//     }
-// `;
-
 
 
 export default FormStep1;

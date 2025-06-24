@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import MultistepForm from "../../components/MultistepForm";
 
 function Signup() {

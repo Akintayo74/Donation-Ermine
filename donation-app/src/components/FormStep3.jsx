@@ -1,26 +1,26 @@
 import Input from "./Input";
 import Button from "./Button";
+import Form from "./Form";
+import PageWrapper from "./PageWrapper";
 
 function FormStep3({ formData, onNext, onChange }) {
 
-    function handleSubmit(event) {
-        event.preventDefault();
-        onNext();
-    }
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
-                <Input 
-                    name = "orgName"
-                    placeholder = 'Organization name here'
-                    value = {formData.orgName}
-                    type = 'text'
-                    onChange = {(event) => onChange('orgName', event.target.value)}
-                />
+            <PageWrapper>
+                <Form onSubmit={() => onNext()}>
+                    <Input 
+                        name = "orgName"
+                        placeholder = 'Organization name here'
+                        value = {formData.orgName}
+                        type = 'text'
+                        onChange = {(event) => onChange('orgName', event.target.value)}
+                    />
 
-                <Button>Next Step</Button>
-            </form>
+                    <Button>Next Step</Button>
+                </Form>
+            </PageWrapper>
         </>
     )
 }
