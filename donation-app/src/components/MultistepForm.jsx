@@ -1,4 +1,6 @@
 import React from 'react';
+import FormStep1 from './FormStep1';
+
 
 function MultistepForm() {
     const [step, setStep] = React.useState(1);
@@ -23,10 +25,10 @@ function MultistepForm() {
 
     return (
         <>
-            {step === 1 && <FormStep1 formData={formData} onChange={handleChange} onNext={() => setStep(2)} />}
-            {step === 2 && <FormStep2 formData={formData} onChange={handleChange} onNext={() => setStep(3)} />}
+            {step === 1 && <FormStep1 formData={formData} onChange={updateFormData} onNext={() => setStep(2)} />}
+            {/* {step === 2 && <FormStep2 formData={formData} onChange={handleChange} onNext={() => setStep(3)} />}
             {step === 3 && <FormStep3 formData={formData} onChange={handleChange} onNext={() => setStep(4)} />}
-            {step === 4 && <FormStepReview formData={formData} onSubmit={handleSubmit} />}
+            {step === 4 && <FormStepReview formData={formData} onSubmit={handleSubmit} />} */}
         </>
     )
 }

@@ -14,7 +14,7 @@ function Home() {
             <Container>
                 <h1>Welcome to the Donation Platform</h1>
                 <p>Make a small difference today!</p>
-                <Input />
+                {/* <Input /> */}
                 <Button to='/donate'>Start donating!</Button>
             </Container>
         </>
