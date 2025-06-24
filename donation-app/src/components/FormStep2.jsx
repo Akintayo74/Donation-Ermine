@@ -2,20 +2,18 @@ import Input from "./Input";
 import Button from "./Button";
 import PageWrapper from "./PageWrapper";
 import styled from "styled-components";
+import Form from "./Form";
 
 function FormStep2({ formData, onNext, onChange }) {
-
-    function handleSubmit(event) {
-        event.preventDefault();
-        onNext();
-    }
 
     return (
         <>
             <PageWrapper>
-                <Form onSubmit={handleSubmit}>
+                <Form onSubmit={() => onNext()}>
                     <h2>Almost There!</h2>
                     <p>Lorem ipsum is simply dummy text of the printing and writing industry</p>
+
+                    <Label>CAC or Local Government registration ID</Label>
                     <Input 
                         name = "orgName"
                         placeholder = 'Organization name here'
@@ -31,10 +29,8 @@ function FormStep2({ formData, onNext, onChange }) {
     )
 }
 
-const Form = styled.form `
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-`;
+const Label = styled.label `
+    font-weight: var(--font-weight-semiBold);
+`
 
 export default FormStep2;

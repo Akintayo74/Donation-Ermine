@@ -57,6 +57,7 @@ const GlobalStyles = createGlobalStyle `
     :root {
         font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
         --font-weight-default: 400;
+        --font-weight-semiBold: 600;
         --font-weight-bold: 700;
         --font-size-medium: 20px;
         --font-size-normal: 17px;

@@ -2,18 +2,19 @@ import Input from "./Input";
 import Button from "./Button";
 import styled from "styled-components";
 import PageWrapper from "./PageWrapper";
+import Form from "./Form";
 
 function FormStep1({ formData, onNext, onChange }) {
 
-    function handleSubmit(event) {
-        event.preventDefault();
-        onNext();
-    }
+    // function handleSubmit(event) {
+    //     event.preventDefault();
+    //     onNext();
+    // }
 
     return (
         <>
             <PageWrapper>
-                <Form onSubmit={handleSubmit}>
+                <Form onSubmit={() => onNext()}>
                     <label htmlFor="orgName">Organization Name</label>
                     <Input 
                         name = "orgName"
@@ -49,16 +50,16 @@ function FormStep1({ formData, onNext, onChange }) {
     )
 }
 
-const Form = styled.form `
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 10px;
+// const Form = styled.form `
+//     display: flex;
+//     flex-direction: column;
+//     gap: 10px;
+//     margin: 10px;
 
-    & > Input {
-        margin-bottom: 10px;
-    }
-`;
+//     & > Input {
+//         margin-bottom: 10px;
+//     }
+// `;
 
 
 
