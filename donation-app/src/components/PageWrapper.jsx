@@ -8,10 +8,14 @@ const Wrapper = styled.div `
     gap: 10px;
     padding-inline: 10rem;
     padding-block: 1rem;
-
+    
     
     @media (max-width: 550px) {
         padding-inline: 1rem;
+    }
+
+    @media (min-width: 1000px) {
+        background: linear-gradient(to right, white 66%, hsla(238, 50%, 22%, 1) 33%);
     }
 `
 
