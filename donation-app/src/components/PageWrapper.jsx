@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import PlantImage from './PlantImage';
 
 const Wrapper = styled.div `
     display: flex;
@@ -21,7 +22,12 @@ const Wrapper = styled.div `
 
 function PageWrapper({ children }) {
 
-    return <Wrapper>{ children }</Wrapper>
+    return (
+        <Wrapper>
+            <PlantImage />
+            { children }
+        </Wrapper>
+    )
 }
 
 export default PageWrapper;
