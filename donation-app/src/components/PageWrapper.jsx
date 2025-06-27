@@ -11,7 +11,7 @@ const Wrapper = styled.div `
     padding-block: 1rem;
     
     
-    @media (max-width: 550px) {
+    @media (max-width: 700px) {
         padding-inline: 1rem;
     }
 

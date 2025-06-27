@@ -3,6 +3,8 @@ import Button from "./Button";
 import PageWrapper from "./PageWrapper";
 import styled from "styled-components";
 import Form from "./Form";
+import BoldLabel from "./BoldLabel";
+import Paragraph from "./Paragraph";
 
 function FormStep2({ formData, onNext, onChange }) {
 
@@ -11,9 +13,9 @@ function FormStep2({ formData, onNext, onChange }) {
             <PageWrapper>
                 <Form onSubmit={() => onNext()}>
                     <h2>Almost There!</h2>
-                    <p>Lorem ipsum is simply dummy text of the printing and writing industry</p>
+                    <Paragraph>Lorem ipsum is simply dummy text of the printing and writing industry</Paragraph>
 
-                    <Label htmlFor="id">CAC or Local Government registration ID</Label>
+                    <BoldLabel htmlFor="id">CAC or Local Government registration ID</BoldLabel>
                     <Input 
                         name = "id"
                         placeholder = 'Organization ID here'
@@ -22,7 +24,7 @@ function FormStep2({ formData, onNext, onChange }) {
                         onChange = {(event) => onChange('id', event.target.value)}
                     />
 
-                    <Label>Organization Mobile Number</Label>
+                    <BoldLabel>Organization Mobile Number</BoldLabel>
                     <Input 
                         name = "orgNumber"
                         placeholder = "Organization Mobile Number here"
@@ -38,8 +40,6 @@ function FormStep2({ formData, onNext, onChange }) {
     )
 }
 
-const Label = styled.label `
-    font-weight: var(--font-weight-semiBold);
-`
+
 
 export default FormStep2;

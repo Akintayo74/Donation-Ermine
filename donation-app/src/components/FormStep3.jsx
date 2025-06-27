@@ -2,6 +2,7 @@ import Input from "./Input";
 import Button from "./Button";
 import Form from "./Form";
 import PageWrapper from "./PageWrapper";
+import BoldLabel from "./BoldLabel";
 
 function FormStep3({ formData, onNext, onChange }) {
 

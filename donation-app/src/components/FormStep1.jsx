@@ -3,6 +3,9 @@ import Button from "./Button";
 import PageWrapper from "./PageWrapper";
 import Form from "./Form";
 import { Link } from 'react-router-dom';
+import BoldLabel from "./BoldLabel";
+import styled from "styled-components";
+import Paragraph from "./Paragraph";
 
 function FormStep1({ formData, onNext, onChange }) {
 
@@ -13,8 +16,8 @@ function FormStep1({ formData, onNext, onChange }) {
                 <Form onSubmit={() => onNext()}>
                     <h1>New here?</h1>
                     <p>Lorem ipsum is simply dummy text of the printing and writing industry</p>
-                    <p>Already have an account? <Link to='/auth/login'>Login</Link></p>
-                    <label htmlFor="orgName">Organization Name</label>
+                    <Paragraph>Already have an account? <Link to='/auth/login'>Login</Link></Paragraph>
+                    <BoldLabel htmlFor="orgName">Organization Name</BoldLabel>
                     <Input 
                         name = "orgName"
                         placeholder = 'Organization name here'
@@ -23,7 +26,7 @@ function FormStep1({ formData, onNext, onChange }) {
                         onChange = {(e) => onChange('orgName', e.target.value)}
                     />
 
-                    <label htmlFor="orgEmail">Organization Email</label>
+                    <BoldLabel htmlFor="orgEmail">Organization Email</BoldLabel>
                     <Input 
                         name="orgEmail"
                         placeholder="Organization email here"
@@ -32,7 +35,7 @@ function FormStep1({ formData, onNext, onChange }) {
                         onChange = {(e) => onChange('orgEmail', e.target.value)}
                     />
 
-                    <label htmlFor="password">Password</label>
+                    <BoldLabel htmlFor="password">Password</BoldLabel>
                     <Input 
                         name="password"
                         placeholder="Password"
@@ -48,6 +51,7 @@ function FormStep1({ formData, onNext, onChange }) {
         </>
     )
 }
+
 
 
 export default FormStep1;
